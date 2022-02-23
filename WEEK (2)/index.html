@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+            background-color:whitesmoke;
+            margin: 20px 100px;
+            font-family: 'Poppins', sans-serif;
+        }
+       
+        .container{
+            display: grid;
+            
+            grid-template-columns: repeat(4,1fr);
+        }
+        .main-div{
+             /* width: 100px; */
+             /* padding: 20px;
+             margin: 10px ; */
+            /* height: 300px;  */
+            border-left:7px solid  ;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
+                        -5px -5px 15px  rgba(0, 0, 0, 0.1);
+        }
+        img{
+            width: 100%;
+        }
+        button{
+            margin-left: 10px ;
+            margin-bottom: 20px;
+            border: none;
+            background-color: salmon;
+            padding: 10px 15px;
+            color: white;
+            font-weight: bold;
+            
+        }
+        button:hover{
+            background-color: blueviolet;
+        }
+        .info-div{
+            margin-top: 50px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            color:;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Word!</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad laboriosam sapiente eius fugiat, impedit ut molestiae illum repellat consequuntur voluptates.</p>
+    <div class="container">
+        <div class="main-div">
+            <div>
+                <img src="pp.jfif" alt="">
+            </div>
+            <div class="info-div">
+                <h3>Fancy red shoe</h3>
+                <h3>Price $250</h3>
+
+            </div>
+          
+            
+            <button onclick="orderNow()">Order Now</button>
+        </div>
+        
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
