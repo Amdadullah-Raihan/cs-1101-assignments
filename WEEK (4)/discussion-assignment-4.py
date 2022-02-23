@@ -11,15 +11,15 @@ I. There is something wrong with the arguments the function is getting; a precon
 Precondition: 
 Conditions that are applied before executing a function are called preconditions.											  
 My Explanation: 
-It can happen when we do not send arguments when we have to.
+When we use parameters in a function and do not send the arguments while calling the function. The interpreter would throw this error because of expecting arguments as the value of the parameters.  
 """
 
-# My Code: 
+# My Code 1 
 def multi_table(n,t):
     if n == 11:
         return
     else:
-        print(str(n) + " X " + str(t) + " = " + str(n*t))
+        print(str(t) + " X "  + str(n)+ " = " + str(n*t))
         return multi_table(n+1,t)
 
 t = int(input("Enter a number: "))
@@ -27,13 +27,11 @@ multi_table(1) # here I missed 1 argument
 
 """ 
 Output: 
-Enter a number: 5
+Enter a number: 4
 Traceback (most recent call last):
-  File "c:\Users\Amdadullah Raihan\Desktop\CS 1101\ASSIGNMENTS\WEEK (4)\discussion-assignment-4.py", line 17, in <module>
-    multi_table(1)
+  File "c:\Users\Amdadullah Raihan\Desktop\CS 1101\ASSIGNMENTS\WEEK (4)\test.py", line 9, in <module>
+    multi_table(1) # here I missed 1 argument
 TypeError: multi_table() missing 1 required positional argument: 't'
-PS C:\Users\Amdadullah Raihan\Desktop\CS 1101\ASSIGNMENTS> 
-
 
 """
 
@@ -42,29 +40,29 @@ II. There is something wrong with the function; a postcondition is violated.
 Postcondition: 
 Conditions that are applied after executing a function are called preconditions.
 My Explanation: 
-It can happen if I send a different type of argument violating functions' expectation type  
+When a function doesn't get any precondition error and starts executing the function and gets errors from the inside statement of the function, then we get this error. It also can happen, if we send a different type of argument violating functions' expectation type. 
 
 """
 
-# My Code: 
+# My Code: 2
 def multi_table(n,t):
     if n == 11:
         return
     else:
-        print(n + " X " + str(t) + " = " + str(n*t)) #Here I am not converting "n" to a string
+        print(t + " X "  + str(n)+ " = " + str(n*t)) #Here I am not converting "t" to a string
         return multi_table(n+1,t)
 
 t = int(input("Enter a number: "))
 multi_table(1,t)
 
 """ 
-    Enter a number: 2
-    Traceback (most recent call last):
-    File "c:\Users\Amdadullah Raihan\Desktop\CS 1101\ASSIGNMENTS\WEEK (4)\test.py", line 9, in <module>   
-        multi_table(1,t)
-    File "c:\Users\Amdadullah Raihan\Desktop\CS 1101\ASSIGNMENTS\WEEK (4)\test.py", line 5, in multi_table
-        print(n + " X " + str(t) + " = " + str(n*t)) #Here I am not converting "n" to a string
-    TypeError: unsupported operand type(s) for +: 'int' and 'str'
+Enter a number: 5
+Traceback (most recent call last):
+  File "c:\Users\Amdadullah Raihan\Desktop\CS 1101\ASSIGNMENTS\WEEK (4)\test.py", line 9, in <module>
+    multi_table(1,t)
+  File "c:\Users\Amdadullah Raihan\Desktop\CS 1101\ASSIGNMENTS\WEEK (4)\test.py", line 5, in multi_table
+    print(t + " X "  + str(n)+ " = " + str(n*t)) #Here I am not converting "t" to a string
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 """
 
@@ -73,9 +71,9 @@ multi_table(1,t)
 """ 
 III. There is something wrong with the return value or the way it is being used.
 My Explanation: 
-
+The error occurs when the function not return according to the expectation.
 """
-# My Code: 
+# My Code: 3
 def multi_table(n,t):
     if n == 11:
         return
@@ -98,6 +96,18 @@ Traceback (most recent call last):
 TypeError: multi_table() missing 1 required positional argument: 't' 
 
 """
+
+# This code will work properly without throwing any error
+def multi_table(n,t):
+    if n == 11:
+        return
+    else:
+        print(str(t) + " X "  + str(n)+ " = " + str(n*t))
+        return multi_table(n+1,t)
+
+t = int(input("Enter a number: "))
+multi_table(1,t)
+
 
 """
 Reference 
