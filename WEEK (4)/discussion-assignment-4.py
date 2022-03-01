@@ -71,7 +71,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 """ 
 III. There is something wrong with the return value or the way it is being used.
 My Explanation: 
-The error occurs when the function not return according to the expectation.
+The error occurs when the function does not return according to the expectation.
 """
 # My Code: 3
 def multi_table(n,t):
